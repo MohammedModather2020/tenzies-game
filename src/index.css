@@ -17,7 +17,7 @@
    2.0- Main Section
    2.0- Die Section
 * 3- Common Style
-   3.0- 
+   3.0- Button Primary
 */
 /* 
 /** 1- Genral Style */
@@ -35,7 +35,7 @@
 }
 /** 1.2- Body Element */
 body{
-  font-family: 'Inter', sans-serif;
+  font-family: 'Karla', sans-serif;
   background-color: var(--colorPrimary);
   padding: 1rem;
 }
@@ -51,7 +51,7 @@ body{
   padding: 1.4rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   border-radius: .4rem;
   -webkit-border-radius: .4rem;
@@ -88,8 +88,22 @@ body{
 .die-num{
   font-size: 2rem;
 }
-
-
-
 /** 3- Common Style */
-/**  3.0-  */
+/**  3.0- Button Primary */
+.btn-primary{
+  padding: .6rem 2.5rem;
+  border: 0;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  background-color: #5035FF;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
+}
+.btn-primary:active{
+  opacity: .8;
+}
