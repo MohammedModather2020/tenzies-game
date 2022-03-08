@@ -9,23 +9,49 @@ function App() {
   function allNewDice() {
     const newDice = [];
     for (let i = 0; i < 10; i++) {
-      newDice.push({
-        id: nanoid(),
-        value: Math.ceil(Math.random() * 6),
-        isHeld: false,
-      });
+      newDice.push(generateNewDie());
     }
     return newDice;
   }
   //----------------------------------------------------------------->
-  function rollDice() {
-    setDice(allNewDice());
+  // generate new die
+  function generateNewDie() {
+    return {
+      id: nanoid(),
+      value: Math.ceil(Math.random() * 6),
+      isHeld: false,
+    };
   }
+  //----------------------------------------------------------------->
+  // click button to generate new dice
+  const rollDice = () => {
+    setDice((prevDice) =>
+      prevDice.map((die) => {
+        return die.isHeld ? die : generateNewDie();
+      })
+    );
+  };
+  //----------------------------------------------------------------->
+  // change isHeld property to true after click die item
+  const heldDice = (id) => {
+    setDice((prevDice) =>
+      prevDice.map((die) => {
+        return die.id === id ? { ...die, isHeld: !die.isHeld } : die;
+      })
+    );
+  };
   return (
     <main className='main'>
+      <h1 className='title'>Tenzies</h1>
+      <p className='instructions'>Roll unit all dice are the same. Click each die to freeze it at its current value between rolls.</p>
       <div className='dice-container'>
         {dice.map((die) => (
-          <Die key={die.id} value={die.value} />
+          <Die
+            key={die.id}
+            value={die.value}
+            isHeld={die.isHeld}
+            heldDice={() => heldDice(die.id)}
+          />
         ))}
       </div>
       <button className='btn-primary' onClick={rollDice}>
