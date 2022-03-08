@@ -18,6 +18,7 @@
    2.0- Die Section
 * 3- Common Style
    3.0- Button Primary
+   3.1- Is Held
 */
 /* 
 /** 1- Genral Style */
@@ -64,12 +65,23 @@ body{
   -ms-transform: translate(-50%,-50%);
   -o-transform: translate(-50%,-50%);
 }
+.main .title{
+  font-size: 2.3rem;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}.main .instructions{
+  text-align: center;
+  line-height: 1.7;
+}
 /** 2.1- Die Section */
 .dice-container{
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: repeat(5,1fr);
   gap: 1.4rem;
+  margin-bottom: 3rem;
 }
 .die-face{
   height: 50px;
@@ -106,4 +118,9 @@ body{
 }
 .btn-primary:active{
   opacity: .8;
+}
+/** 3.1- Is Held */
+.is-held{
+  background-color: #59E391;
+  color: white;
 }
