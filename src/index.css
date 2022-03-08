@@ -1,13 +1,95 @@
-body {
+/* 
+* Template Name             : Tenzies Game
+* Start Date                : 8-2-2022
+* End Date                  : 
+* Last Update               : 
+* Version                   : 1.0.0
+* URL                       : https://mohammedmodather2020.github.io/tenzies-games
+* GitHub URL                : https://github.com/MohammedModather2020/tenzies-games.git
+* Contact US                : mohammedmodather144@gmail.com
+*/
+/* 
+* 1- General Style
+   1.0- Universal Selector
+   1.1- Root Element
+   1.2- Body Element
+* 2- Section Style
+   2.0- Main Section
+   2.0- Die Section
+* 3- Common Style
+   3.0- 
+*/
+/* 
+/** 1- Genral Style */
+/**  1.0- Universal Selector */
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+/** 1.1- Root Element */
+:root{
+  --colorPrimary:#0B2434;
+  --colorSecondary: #F5F5F5;
+  scroll-behavior: smooth;
+}
+/** 1.2- Body Element */
+body{
+  font-family: 'Inter', sans-serif;
+  background-color: var(--colorPrimary);
+  padding: 1rem;
+}
+/** 2- Section Style */
+/**  2.0- Main Section */
+.main{
+  position: absolute;
+  background-color: var(--colorSecondary);
+  height: 400px;
+  max-width: 800px;
+  top: 50%;
+  left: 50%;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: .4rem;
+  -webkit-border-radius: .4rem;
+  -moz-border-radius: .4rem;
+  -ms-border-radius: .4rem;
+  -o-border-radius: .4rem;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+}
+/** 2.1- Die Section */
+.dice-container{
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: repeat(5,1fr);
+  gap: 1.4rem;
+}
+.die-face{
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+}
+.die-num{
+  font-size: 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+
+/** 3- Common Style */
+/**  3.0-  */
