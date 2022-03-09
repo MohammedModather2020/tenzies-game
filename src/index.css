@@ -46,7 +46,7 @@ body{
   position: absolute;
   background-color: var(--colorSecondary);
   height: 400px;
-  max-width: 800px;
+  max-width: 400px;
   top: 50%;
   left: 50%;
   padding: 1.4rem;
@@ -71,7 +71,8 @@ body{
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: -4px;
-}.main .instructions{
+}
+.main .instructions{
   text-align: center;
   line-height: 1.7;
 }
